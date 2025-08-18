@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inicio de sesión</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+
+    <div class="language-selector">
+        <div class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    id="language-button">
+                Language
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#" id="en-link">English</a></li>
+                <li><a class="dropdown-item" href="#" id="es-link">Español</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <form id="form1" class="bg-light p-5 rounded-4 shadow-lg" style="max-width: 450px; width: 100%;">
+
+        <div class="text-center mb-4">
+            <h3 class="fw-bold mb-0 text-dark" data-i18n-key="title">🧑🏻‍💻Inicio de sesión</h3>
+        </div>
+
+        <div class="form-group mb-4">
+            <label class="form-label text-muted fw-bold" for="txt_username" data-i18n-key="usernameLabel">
+                👤 Nombre de usuario
+            </label>
+            <input type="text" id="txt_username" class="form-control form-control-lg"
+                data-i18n-placeholder="usernamePlaceholder" placeholder="Escribe tu usuario" maxlength="50" />
+        </div>
+
+        <div class="form-group mb-4">
+            <label class="form-label text-muted fw-bold" for="txt_password" data-i18n-key="passwordLabel">
+                🔑 Contraseña
+            </label>
+            <div class="input-group input-group-lg">
+                <input type="password" id="txt_password" class="form-control"
+                    data-i18n-placeholder="passwordPlaceholder" placeholder="Ingresa tu contraseña" maxlength="50" />
+                <span class="input-group-text bg-white password-toggle" id="passwordToggle">
+                    <i class="bi bi-eye-fill"></i>
+                </span>
+            </div>
+            <small class="text-sm mt-2 d-block" id="feedbackText"></small>
+        </div>
+
+        <div class="form-group my-4">
+            <button type="submit" id="submitButton" form="form1" class="btn btn-dark btn-lg w-100 fw-bold"
+                data-i18n-key="submitButton">Iniciar sesión</button>
+        </div>
+
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
